@@ -1,62 +1,61 @@
-import path from 'path'
-import fs from 'fs/promises'
-import { notFound } from 'next/navigation'
-import { Metadata } from 'next'
+'use client'
 
-interface Page {
-  slug: string
-  title: string
-  description?: string
-  body: string
-}
+import { useState, useEffect } from 'react'
+import dynamic from 'next/dynamic'
 
-interface PageProps {
-  params: {
-    slug: string[]
+// Caricamento dinamico di EditorOutput
+const EditorOutput = dynamic(() => import('@/components/EditorOutput'), {
+  ssr: false, // Disabilita SSR per il componente EditorOutput
+})
+
+export default function PagePage({ params }: { params: { slug: string[] } }) {
+  const slug = params.slug.join('/')
+  const [page, setPage] = useState<any | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchPage = async () => {
+      try {
+        const res = await fetch(`/api/pages?slug=${slug}`)
+        if (!res.ok) throw new Error(`Errore nel caricamento ${res.status}`)
+        const data = await res.json()
+
+        const foundPage = data.find((p: any) => p.slug === slug)
+        if (!foundPage) {
+          console.warn('Pagina non trovata per slug:', slug)
+          setPage(null)
+        } else {
+          setPage(foundPage)
+        }
+      } catch (error) {
+        console.error('Errore nel recupero della pagina:', error)
+        setPage(null)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchPage()
+  }, [slug])
+
+  if (loading) {
+    return <p className="text-center mt-10">Caricamento in corso...</p>
   }
-}
-
-async function getAllPages(): Promise<Page[]> {
-  const filePath = path.join(process.cwd(), 'data', 'pages.json')
-  const json = await fs.readFile(filePath, 'utf-8')
-  return JSON.parse(json)
-}
-
-async function getPageFromParams(params: PageProps["params"]) {
-  const slug = params?.slug?.join('/')
-  const pages = await getAllPages()
-  return pages.find(page => page.slug === slug)
-}
-
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  const pages = await getAllPages()
-  return pages.map((page) => ({
-    slug: page.slug.split('/'),
-  }))
-}
-
-export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  const page = await getPageFromParams(params)
-  if (!page) return {}
-  return {
-    title: page.title,
-    description: page.description,
-  }
-}
-
-export default async function PagePage({ params }: PageProps) {
-  const page = await getPageFromParams(params)
 
   if (!page) {
-    notFound()
+    return (
+      <div className="text-center mt-10 text-red-600">
+        <p>Pagina non trovata.</p>
+      </div>
+    )
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
-      <h1>{page.title}</h1>
-      {page.description && <p className="text-xl">{page.description}</p>}
-      <hr />
-      <div dangerouslySetInnerHTML={{ __html: page.body }} />
+    <article className="prose dark:prose-invert max-w-3xl mx-auto py-10">
+      <h1 className="text-3xl font-bold mb-4">{page.title}</h1>
+      {page.description && <p className="text-lg text-gray-500 mb-4">{page.description}</p>}
+      {/* Utilizza EditorOutput per visualizzare il contenuto */}
+      <EditorOutput content={page.body} />
     </article>
   )
 }

@@ -1,57 +1,50 @@
 [
-    {
-      "slug": "chi-siamo",
-      "title": "Chi siamo",
-      "description": "Scopri chi siamo",
-      "body": "<p>Siamo una squadra di sviluppatori appassionati, specializzati in web, eCommerce e soluzioni su misura per i nostri clienti.</p>"
-    },
-    {
-      "slug": "chi-siamo/cosa-sono",
-      "title": "Cosa sono",
-      "description": "Scopri chi siamo",
-      "body": "<p>Siamo una squadra di sviluppatori appassionati, specializzati in web, eCommerce e soluzioni su misura per i nostri clienti.</p>"
-    },
-    {
-      "slug": "chi-siamo/come-nascono",
-      "title": "Come nascono",
-      "description": "Scopri chi siamo",
-      "body": "<p>Siamo una squadra di sviluppatori appassionati, specializzati in web, eCommerce e soluzioni su misura per i nostri clienti.</p>"
-    },
-    {
-      "slug": "chi-siamo/associazione",
-      "title": "Associazione",
-      "description": "Scopri chi siamo",
-      "body": "<p>Siamo una squadra di sviluppatori appassionati, specializzati in web, eCommerce e soluzioni su misura per i nostri clienti.</p>"
-    },
-    {
-      "slug": "sponsor",
-      "title": "Sponsor",
-      "description": "",
-      "body": "<p>pagina sponsor</p>"
-    },
-    {
-      "slug": "location",
-      "title": "Location",
-      "description": "",
-      "body": "<p>pagina location</p>"
-    },
-    {
-      "slug": "contatti",
-      "title": "Contattaci",
-      "description": "",
-      "body": "<p>pagina contatti</p>"
-    },
-    {
-      "slug": "privacy",
-      "title": "Privacy Policy",
-      "description": "Come gestiamo i tuoi dati",
-      "body": "<p>Questa è la nostra informativa sulla privacy. Ci impegniamo a proteggere i tuoi dati personali in conformità al GDPR.</p>"
-    },
-    {
-      "slug": "termini-e-condizioni",
-      "title": "Termini e condizioni",
-      "description": "Condizioni di utilizzo del sito",
-      "body": "<p>Utilizzando questo sito accetti i nostri termini e condizioni d’uso.</p>"
-    }
-  ]
-  
+  {
+    "slug": "chi-siamo/cosa-sono",
+    "title": "Cosa sono",
+    "description": "Scopri chi siamo",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  },
+  {
+    "slug": "chi-siamo/come-nascono",
+    "title": "Come nascono",
+    "description": "Scopri chi siamo",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  },
+  {
+    "slug": "chi-siamo/associazione",
+    "description": "",
+    "title": "Associazione",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  },
+  {
+    "slug": "sponsor",
+    "title": "Sponsor",
+    "description": "",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  },
+  {
+    "slug": "location",
+    "title": "Location",
+    "description": "",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  },
+  {
+    "slug": "contatti",
+    "title": "Contattaci",
+    "description": "",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  },
+  {
+    "slug": "privacy",
+    "title": "Privacy Policy",
+    "description": "Come gestiamo i tuoi dati",
+    "body": "<p>Questa è la nostra informativa sulla privacy. Ci impegniamo a proteggere i tuoi dati personali in conformità al GDPR.</p>"
+  },
+  {
+    "slug": "termini-e-condizioni",
+    "title": "Termini e condizioni",
+    "description": "Condizioni di utilizzo del sito",
+    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+  }
+]

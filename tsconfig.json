@@ -31,7 +31,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
+    "types",
+    "app",
+    "components"
   ],
   "exclude": ["node_modules"]
 }
