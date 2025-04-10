@@ -1,8 +1,14 @@
-import { notFound } from "next/navigation"
-import { Metadata } from "next"
-import { allPages } from "contentlayer/generated"
+import path from 'path'
+import fs from 'fs/promises'
+import { notFound } from 'next/navigation'
+import { Metadata } from 'next'
 
-import { Mdx } from "@/components/mdx-components"
+interface Page {
+  slug: string
+  title: string
+  description?: string
+  body: string
+}
 
 interface PageProps {
   params: {
@@ -10,36 +16,32 @@ interface PageProps {
   }
 }
 
-async function getPageFromParams(params: PageProps["params"]) {
-  const slug = params?.slug?.join("/")
-  const page = allPages.find((page) => page.slugAsParams === slug)
-
-  if (!page) {
-    null
-  }
-
-  return page
+async function getAllPages(): Promise<Page[]> {
+  const filePath = path.join(process.cwd(), 'data', 'pages.json')
+  const json = await fs.readFile(filePath, 'utf-8')
+  return JSON.parse(json)
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
+async function getPageFromParams(params: PageProps["params"]) {
+  const slug = params?.slug?.join('/')
+  const pages = await getAllPages()
+  return pages.find(page => page.slug === slug)
+}
+
+export async function generateStaticParams(): Promise<PageProps["params"][]> {
+  const pages = await getAllPages()
+  return pages.map((page) => ({
+    slug: page.slug.split('/'),
+  }))
+}
+
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const page = await getPageFromParams(params)
-
-  if (!page) {
-    return {}
-  }
-
+  if (!page) return {}
   return {
     title: page.title,
     description: page.description,
   }
-}
-
-export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  return allPages.map((page) => ({
-    slug: page.slugAsParams.split("/"),
-  }))
 }
 
 export default async function PagePage({ params }: PageProps) {
@@ -54,7 +56,7 @@ export default async function PagePage({ params }: PageProps) {
       <h1>{page.title}</h1>
       {page.description && <p className="text-xl">{page.description}</p>}
       <hr />
-      <Mdx code={page.body.code} />
+      <div dangerouslySetInnerHTML={{ __html: page.body }} />
     </article>
   )
 }
