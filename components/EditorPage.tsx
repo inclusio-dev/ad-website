@@ -11,6 +11,8 @@ import Checklist from "@editorjs/checklist";
 import Code from "@editorjs/code";
 import Embed from "@editorjs/embed";
 import ImageTool from "@editorjs/image";
+import LinkTool from '@editorjs/link'
+
 
 export default function EditorPage({ slug }: { slug: string }) {
     const editorRef = useRef<EditorJS | null>(null);
@@ -63,12 +65,11 @@ export default function EditorPage({ slug }: { slug: string }) {
         return
       }
     
-      // ⚠️ Pulisci il contenuto del contenitore prima di montare l'editor
+      // ✅ PULIZIA del contenitore editor
       const holder = document.getElementById('editor')
-      if (holder) {
-        holder.innerHTML = ''
-      }
-    
+      if (holder) holder.innerHTML = ''
+
+      // ✅ Inizializza EditorJS
       const editor = new EditorJS({
         holder: 'editor',
         autofocus: true,
@@ -98,6 +99,12 @@ export default function EditorPage({ slug }: { slug: string }) {
                 byFile: '/api/upload-image',
                 byUrl: '',
               },
+            },
+          },
+          linkTool: {
+            class: LinkTool as unknown as ToolConstructable,
+            config: {
+              endpoint: '/api/fetch-url', // Può essere un endpoint dummy o reale
             },
           },
         },
