@@ -16,7 +16,11 @@ export default function PagePage({ params }: { params: { slug: string[] } }) {
   useEffect(() => {
     const fetchPage = async () => {
       try {
-        const res = await fetch(`/api/pages?slug=${slug}`)
+        //const res = await fetch(`/api/pages?slug=${slug}`)
+        const res = await fetch(`/api/pages?slug=${slug}`, {
+          cache: 'no-store',
+        })
+        
         if (!res.ok) throw new Error(`Errore nel caricamento ${res.status}`)
         const data = await res.json()
 
@@ -56,6 +60,7 @@ export default function PagePage({ params }: { params: { slug: string[] } }) {
       {page.description && <p className="text-lg text-gray-500 mb-4">{page.description}</p>}
       {/* Utilizza EditorOutput per visualizzare il contenuto */}
       <EditorOutput content={page.body} />
+      
     </article>
   )
 }

@@ -1,47 +1,78 @@
-'use client'
+"use client";
 
-import React, { useEffect, useRef, useState } from 'react'
-import EditorJS from '@editorjs/editorjs'
-import type { ToolConstructable } from '@editorjs/editorjs'
+import React, { useEffect, useRef, useState } from "react";
+import EditorJS from "@editorjs/editorjs";
+import type { ToolConstructable } from "@editorjs/editorjs";
 
 // Tools
-import Header from '@editorjs/header'
-import List from '@editorjs/list'
-import Checklist from '@editorjs/checklist'
-import Code from '@editorjs/code'
-import Embed from '@editorjs/embed'
-import ImageTool from '@editorjs/image'
+import Header from "@editorjs/header";
+import List from "@editorjs/list";
+import Checklist from "@editorjs/checklist";
+import Code from "@editorjs/code";
+import Embed from "@editorjs/embed";
+import ImageTool from "@editorjs/image";
 
 export default function EditorPage({ slug }: { slug: string }) {
-  const editorRef = useRef<EditorJS | null>(null)
-  const [isSaving, setIsSaving] = useState(false)
-  const [saveMessage, setSaveMessage] = useState<string | null>(null)
-  const [loading, setLoading] = useState(true)
-  const [pageData, setPageData] = useState<any>(null)
+    const editorRef = useRef<EditorJS | null>(null);
+    const [isSaving, setIsSaving] = useState(false);
+    const [saveMessage, setSaveMessage] = useState<string | null>(null);
+    const [loading, setLoading] = useState(true);
+    const [pageData, setPageData] = useState<any>(null);
 
-  useEffect(() => {
-    const fetchPage = async () => {
-      try {
-        const res = await fetch('/api/pages')
-        const data = await res.json()
-        const found = data.find((p: any) => p.slug === slug)
-        setPageData(found)
-      } catch (err) {
-        console.error('Errore nel caricamento della pagina:', err)
-      } finally {
-        setLoading(false)
-      }
+    useEffect(() => {
+        const fetchPage = async () => {
+            try {
+                const res = await fetch("/api/pages");
+                const data = await res.json();
+                const found = data.find((p: any) => p.slug === slug);
+                setPageData(found);
+            } catch (err) {
+                console.error("Errore nel caricamento della pagina:", err);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchPage();
+    }, [slug]);
+
+    function sanitizeEditorData(output: any) {
+        const validBlocks = output.blocks.filter((block: any) => {
+            return (
+                block &&
+                typeof block.type === "string" &&
+                block.data &&
+                typeof block.data === "object" &&
+                block.data !== null
+            );
+        });
+
+        return {
+            time: output.time || Date.now(),
+            blocks: validBlocks,
+            version: output.version || "2.29.1",
+        };
     }
 
-    fetchPage()
-  }, [slug])
-
-  useEffect(() => {
-    if (!loading && pageData && !editorRef.current) {
+    useEffect(() => {
+      if (loading || !pageData) return
+    
+      // Evita doppie istanze
+      if (editorRef.current) {
+        console.log('Editor già inizializzato')
+        return
+      }
+    
+      // ⚠️ Pulisci il contenuto del contenitore prima di montare l'editor
+      const holder = document.getElementById('editor')
+      if (holder) {
+        holder.innerHTML = ''
+      }
+    
       const editor = new EditorJS({
         holder: 'editor',
         autofocus: true,
-        data: pageData.body, // ✅ Caricamento contenuto reale
+        data: pageData.body,
         tools: {
           header: Header,
           list: {
@@ -71,76 +102,108 @@ export default function EditorPage({ slug }: { slug: string }) {
           },
         },
         onReady() {
+          console.log('✅ EditorJS inizializzato')
           editorRef.current = editor
         },
       })
-    }
-
-    return () => {
-      if (editorRef.current?.destroy) {
-        editorRef.current.destroy()
-        editorRef.current = null
+    
+      return () => {
+        if (editorRef.current) {
+          editorRef.current.destroy()
+          editorRef.current = null
+          console.log('🧹 EditorJS distrutto')
+        }
       }
+    }, [loading, pageData])
+    
+
+    const handleSave = async () => {
+        if (!editorRef.current) return;
+        setIsSaving(true);
+        setSaveMessage(null);
+
+        try {
+            //const output = await editorRef.current.save()
+
+            const output = sanitizeEditorData(await editorRef.current.save());
+
+            // ✅ Validazione base dei blocchi
+            const validBlocks = output.blocks?.every((block: any) => {
+                return (
+                    block &&
+                    typeof block.type === "string" &&
+                    block.data &&
+                    typeof block.data === "object" &&
+                    block.data !== null
+                );
+            });
+
+            if (!validBlocks) {
+                throw new Error("❌ I blocchi contengono dati non validi");
+            }
+
+            const res = await fetch("/api/save-pages", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    slug,
+                    body: output,
+                }),
+            });
+
+            if (!res.ok) {
+                const error = await res.json();
+                throw new Error(`Errore API: ${error.message}`);
+            }
+
+            setSaveMessage("✅ Salvataggio completato!");
+        } catch (err: any) {
+            console.error("Errore salvataggio:", err);
+            setSaveMessage(err.message || "❌ Errore durante il salvataggio.");
+        } finally {
+            setIsSaving(false);
+            setTimeout(() => setSaveMessage(null), 4000);
+        }
+    };
+
+    if (loading) {
+        return <p className="text-center mt-10">Caricamento in corso…</p>;
     }
-  }, [loading, pageData])
 
-  const handleSave = async () => {
-    if (!editorRef.current) return
-    setIsSaving(true)
-    setSaveMessage(null)
-
-    try {
-      const output = await editorRef.current.save()
-
-      const res = await fetch('/api/pages/save', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ slug, body: output }),
-      })
-
-      if (!res.ok) throw new Error('Errore nella richiesta')
-
-      setSaveMessage('✅ Salvataggio completato!')
-    } catch (err) {
-      console.error(err)
-      setSaveMessage('❌ Errore durante il salvataggio.')
-    } finally {
-      setIsSaving(false)
-      setTimeout(() => setSaveMessage(null), 4000)
+    if (!pageData) {
+        return (
+            <p className="text-center mt-10 text-red-600">
+                Pagina non trovata.
+            </p>
+        );
     }
-  }
 
-  if (loading) {
-    return <p className="text-center mt-10">Caricamento in corso…</p>
-  }
+    return (
+        <div className="max-w-4xl mx-auto py-10">
+            <h1 className="text-2xl font-bold mb-6">
+                Modifica pagina: <code>{slug}</code>
+            </h1>
 
-  if (!pageData) {
-    return <p className="text-center mt-10 text-red-600">Pagina non trovata.</p>
-  }
+            <div
+                id="editor"
+                className="bg-white border rounded p-4 min-h-[300px]"
+            />
 
-  return (
-    <div className="max-w-4xl mx-auto py-10">
-      <h1 className="text-2xl font-bold mb-6">
-        Modifica pagina: <code>{slug}</code>
-      </h1>
+            <div className="mt-6 flex items-center gap-4">
+                <button
+                    onClick={handleSave}
+                    disabled={isSaving}
+                    className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+                >
+                    {isSaving ? "Salvataggio in corso…" : "💾 Salva modifiche"}
+                </button>
 
-      <div id="editor" className="bg-white border rounded p-4 min-h-[300px]" />
-
-      <div className="mt-6 flex items-center gap-4">
-        <button
-          onClick={handleSave}
-          disabled={isSaving}
-          className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
-        >
-          {isSaving ? 'Salvataggio in corso…' : '💾 Salva modifiche'}
-        </button>
-
-        {saveMessage && (
-          <span className="text-sm text-gray-700">{saveMessage}</span>
-        )}
-      </div>
-    </div>
-  )
+                {saveMessage && (
+                    <span className="text-sm text-gray-700">{saveMessage}</span>
+                )}
+            </div>
+        </div>
+    );
 }

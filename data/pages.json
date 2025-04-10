@@ -1,50 +1,213 @@
 [
   {
     "slug": "chi-siamo/cosa-sono",
-    "title": "Cosa sono",
-    "description": "Scopri chi siamo",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "title": "Cosa sono gli Accessibility Days",
+    "body": {
+      "time": 1744305850107,
+      "blocks": [
+        {
+          "id": "V-k1C2QOwG",
+          "type": "paragraph",
+          "data": {
+            "text": "“Accessibility Days” nasce nel 2017 come manifestazione gratuita che si svolge in Italia con cadenza annuale, il cui scopo è di informare e sensibilizzare chiunque si occupi di “tecnologie digitali” (sviluppatori, designer, maker, creatori e editori di contenuti, etc…) sul tema dell’accessibilità, per far sì che possano creare soluzioni (siti web, app, device elettronici, stampe 3D, …) più fruibili da persone con disabilità.Dal 2020 temi come la didattica e la formazione a distanza e il lavoro da remoto, resi possibili grazie alle tecnologie digitali, sono diventati fondamentali, ricevendo un’attenzione ancora maggiore."
+          }
+        },
+        {
+          "id": "hEditBjc0d",
+          "type": "paragraph",
+          "data": {
+            "text": "Data l’importanza che software e hardware hanno ormai assunto nella nostra vita quotidiana, è facilmente comprensibile come chi realizza soluzioni basate su di essi possa avere un impatto concreto sulla vita quotidiana delle persone.Gli Accessibility Days sono un’importante occasione per spiegare come prodotti e servizi digitali (o in parte digitali) possano essere più inclusivi, rispondendo alle esigenze di chi ha delle disabilità, non soltanto semplificando la loro vita, ma arrivando a rendere possibile lo svolgimento in autonomia di attività altrimenti impensabili, sia nella vita quotidiana che nell’ambito lavorativo."
+          }
+        },
+        {
+          "id": "g8gZfOchjE",
+          "type": "paragraph",
+          "data": {
+            "text": "Dal 2020, oltre alla conferenza annuale, Accessibility Days svolge anche altre attività divulgative, come i webinar o la partecipazione ad altre conferenze."
+          }
+        },
+        {
+          "id": "KICxwr-0tq",
+          "type": "paragraph",
+          "data": {
+            "text": "Dal 2022 è diventata un’<a href=\"https://accessibilitydays.it/associazione/\">associazione APS (associazione di promozione sociale)</a>."
+          }
+        }
+      ],
+      "version": "2.31.0-rc.7"
+    }
   },
   {
     "slug": "chi-siamo/come-nascono",
     "title": "Come nascono",
     "description": "Scopri chi siamo",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "body": {
+      "time": 1712730000000,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "data": {
+            "text": ""
+          }
+        }
+      ],
+      "version": "2.29.1"
+    }
   },
   {
     "slug": "chi-siamo/associazione",
     "description": "",
     "title": "Associazione",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "body": {
+      "time": 1712730000000,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "data": {
+            "text": ""
+          }
+        }
+      ],
+      "version": "2.29.1"
+    }
   },
   {
     "slug": "sponsor",
     "title": "Sponsor",
     "description": "",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "body": {
+      "time": 1744305751943,
+      "blocks": [
+        {
+          "id": "lftrBSZv-E",
+          "type": "paragraph",
+          "data": {
+            "text": "prova ciao"
+          }
+        },
+        {
+          "id": "h5UU_wv9L8",
+          "type": "paragraph",
+          "data": {
+            "text": "nuova prova"
+          }
+        },
+        {
+          "id": "9Zq-zk7QI4",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "prova",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "prova",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "prova",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "UrLZ6xejKN",
+          "type": "paragraph",
+          "data": {
+            "text": "ciao sono diana"
+          }
+        },
+        {
+          "id": "9KjJyoYCzL",
+          "type": "image",
+          "data": {
+            "caption": "",
+            "withBorder": false,
+            "withBackground": false,
+            "stretched": false,
+            "file": {
+              "url": "/uploads/1744305748749-cssday2025_giulialaco_4 (trascinato).png"
+            }
+          }
+        }
+      ],
+      "version": "2.31.0-rc.7"
+    }
   },
   {
     "slug": "location",
     "title": "Location",
     "description": "",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "body": {
+      "time": 1712730000000,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "data": {
+            "text": ""
+          }
+        }
+      ],
+      "version": "2.29.1"
+    }
   },
   {
     "slug": "contatti",
     "title": "Contattaci",
     "description": "",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "body": {
+      "time": 1744306972233,
+      "blocks": [
+        {
+          "id": "h4hPBvYMAJ",
+          "type": "paragraph",
+          "data": {
+            "text": "sono la pagina contatti"
+          }
+        }
+      ],
+      "version": "2.31.0-rc.7"
+    }
   },
   {
     "slug": "privacy",
     "title": "Privacy Policy",
     "description": "Come gestiamo i tuoi dati",
-    "body": "<p>Questa è la nostra informativa sulla privacy. Ci impegniamo a proteggere i tuoi dati personali in conformità al GDPR.</p>"
+    "body": {
+      "time": 1712730000000,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "data": {
+            "text": ""
+          }
+        }
+      ],
+      "version": "2.29.1"
+    }
   },
   {
     "slug": "termini-e-condizioni",
     "title": "Termini e condizioni",
     "description": "Condizioni di utilizzo del sito",
-    "body": "{\"time\":1744300362597,\"blocks\":[{\"id\":\"6H6-Xmja_4\",\"type\":\"paragraph\",\"data\":{\"text\":\"sono nella nuova pagina associazione\"}},{\"id\":\"vMpnLvZtHK\",\"type\":\"paragraph\",\"data\":{\"text\":\"chissa se funziona davverooooooo&nbsp;\"}}],\"version\":\"2.31.0-rc.7\"}"
+    "body": {
+      "time": 1712730000000,
+      "blocks": [
+        {
+          "type": "paragraph",
+          "data": {
+            "text": ""
+          }
+        }
+      ],
+      "version": "2.29.1"
+    }
   }
 ]
