@@ -45,6 +45,7 @@
     "@editorjs/list": "^2.0.6",
     "@svgr/webpack": "^8.1.0",
     "@types/sanitize-html": "^2.15.0",
+    "@types/uuid": "^10.0.0",
     "ts-node": "^10.9.2"
   }
 }

@@ -42,6 +42,14 @@ export default function ContentManager() {
                         Modifica lista attività
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        className="text-blue-600 underline underline-offset-4 hover:decoration-wavy"
+                        href="/admin/agenda"
+                    >
+                        Modifica agenda
+                    </Link>
+                </li>
             </ul>
         </div>
     );
