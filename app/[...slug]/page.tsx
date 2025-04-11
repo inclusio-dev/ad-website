@@ -49,9 +49,9 @@ export default function PagePage({ params }: { params: { slug: string[] } }) {
   }
 
   return (
-    <article className="prose dark:prose-invert max-w-3xl mx-auto py-10">
+    <div className="prose dark:prose-invert max-w-5xl mx-auto py-10">
       <h1 className="text-3xl font-bold mb-4">{page.title}</h1>
       {renderEditorJsContent(page.body)}
-    </article>
+    </div>
   )
 }
