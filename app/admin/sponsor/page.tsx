@@ -85,6 +85,22 @@ export default function SponsorManager() {
         }
     };
 
+    const handleDeleteSponsor = async (name: string) => {
+        const confirmed = confirm(`Sei sicura di voler rimuovere "${name}"?`);
+        if (!confirmed) return;
+      
+        const res = await fetch(`/api/sponsors?name=${encodeURIComponent(name)}`, {
+          method: "DELETE",
+        });
+      
+        if (res.ok) {
+          setSponsors((prev) => prev.filter((s) => s.name !== name));
+        } else {
+          alert("Errore durante l'eliminazione dello sponsor.");
+        }
+      };
+      
+
     return (
         <div className="max-w-5xl mx-auto mt-12 space-y-4">
             <h1 className="text-2xl font-bold mb-4">Area gestione sponsor</h1>
@@ -119,6 +135,7 @@ export default function SponsorManager() {
                                             key={sponsor.name}
                                             className="flex flex-col items-center"
                                         >
+                                            
                                             <img
                                                 src={sponsor.logo}
                                                 alt={sponsor.name}
@@ -130,6 +147,17 @@ export default function SponsorManager() {
                                             <span className="text-xs text-gray-500 capitalize">
                                                 {sponsor.level}
                                             </span>
+                                            <button
+                                                onClick={() =>
+                                                    handleDeleteSponsor(
+                                                        sponsor.name
+                                                    )
+                                                }
+                                                className="mt-2 px-3 py-1 text-sm font-medium text-white bg-red-600 rounded hover:bg-red-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-red-500 focus-visible:ring-offset-2"
+                                                aria-label={`Elimina sponsor ${sponsor.name}`}
+                                            >
+                                                Elimina
+                                            </button>
                                         </div>
                                     ))}
                                 </div>

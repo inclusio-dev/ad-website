@@ -45,9 +45,7 @@ export default function SponsorList({ sponsors }: SponsorListProps) {
                 return (
                     <div key={level} className="space-y-4">
                         <div
-                            className={`border-b pb-1 ${
-                                isPatrocinio ? "text-left" : "text-right"
-                            }`}
+                            className={`border-b pb-1`}
                         >
                             <h2 className="text-lg font-semibold">
                                 {isPatrocinio
