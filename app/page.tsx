@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SponsorList from "@/components/SponsorList";
 import sponsorsJson from "@/data/sponsors.json";
-import activities from "@/data/upcoming-activities.json";
+import activities from "@/data/activities.json";
 import ActivitiesList from "@/components/ActivitiesList";
 import GaadLogo from '@/public/assets/logo-gaad.svg';
 
