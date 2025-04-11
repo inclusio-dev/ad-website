@@ -42,13 +42,41 @@
     "title": "Come nascono",
     "description": "Scopri chi siamo",
     "body": {
-      "time": 1744317491645,
+      "time": 1744366413255,
       "blocks": [
         {
-          "id": "ifZWdD87cz",
+          "id": "OshF_t3A_y",
           "type": "paragraph",
           "data": {
-            "text": "https://www.wikipedia.org"
+            "text": "Gli Accessibili Days nascono da un’idea di&nbsp;<a href=\"https://www.linkedin.com/in/sauro-cesaretti-290b282b/\">Sauro Cesaretti</a>&nbsp;(all’epoca consigliere della sezione territoriale di Ancona dell’UICI – Unione Italiana dei Ciechi e degli Ipovedenti) e&nbsp;<a href=\"https://www.linkedin.com/in/stefanoottaviani/\">Stefano Ottaviani</a>&nbsp;(fondatore di alcune community che si occupano di sviluppo software, tra cui DevMarche e XPUG Marche).Accomunati dalla passione per l’informatica (per la quale hanno condiviso anche il percorso di studi), nel 2017 decidono di organizzare un evento per parlare di accessibilità a sviluppatori, designer e a chi si occupa di tecnologie digitali in generale."
+          }
+        },
+        {
+          "id": "mzwCjWojFE",
+          "type": "paragraph",
+          "data": {
+            "text": "Nella loro idea di realizzare un evento che non fosse costituito solamente da sessioni teoriche, ma che avesse una componente che permette di “toccare con mano” certi aspetti, sono stati aiutati dalle possibilità che la città di Ancona e la locale sezione UICI offrono.Ad Ancona, infatti, è presente il Museo Tattile Statale Omero, uno dei più importanti al mondo nel suo genere ed è diventata la sede “naturale” per l’evento. Inoltre, la sezione UICI organizza periodicamente delle cene al buio, un’esperienza molto profonda (ma al tempo stesso anche entusiasmante, cosa che non guasta) per provare in prima persona le sensazioni di chi si trova a vivere quotidianamente in un ambiente completamente buio."
+          }
+        },
+        {
+          "id": "Z4gKd7AfOj",
+          "type": "paragraph",
+          "data": {
+            "text": "Navigando su internet per scoprire se altri in Italia o nel mondo organizzassero eventi del genere, scoprono l’esistenza del&nbsp;<a href=\"https://accessibility.day/\">GAAD, il Global Accessibility Awareness Day</a>: data la praticamente totale coincidenza degli obiettivi, Sauro e Stefano decidono che l’evento che avevano in mente poteva essere uno di quelli previsti a livello mondiale per il GAAD, che avrebbe perciò “fatto tappa” anche ad Ancona (<a href=\"https://globalaccessibilityawarenessday.org/events2017.php\">qui si può trovarlo elencato tra gli eventi 2017 del GAAD</a>!)"
+          }
+        },
+        {
+          "id": "DQE0iYRCwZ",
+          "type": "paragraph",
+          "data": {
+            "text": "Nasce così, nel 2017, la prima edizione di un evento inizialmente chiamato “HACK-cessibility Days”, con un gioco di parole che voleva richiamare il termine “hacking”, che contraddistingue chi “smanetta” su un sistema informatico per conoscerlo e apprenderlo appieno. Al fine di rendere il nome maggiormente fruibile, a partire dalla seconda edizione è stato deciso di cambiare per le edizioni successive il nome in “Accessibility Days”."
+          }
+        },
+        {
+          "id": "JhQSbY5LIA",
+          "type": "paragraph",
+          "data": {
+            "text": "Sin dalla prima edizione, Sauro e Stefano riescono a coinvolgere nella loro idea oltre l’UICI di Ancona anche altre realtà, che diventeranno compagni fondamentali per il proseguimento del percorso, continuato poi negli anni successivi. Tra questi, menzione particolare va ad&nbsp;<a href=\"https://www.linkedin.com/in/andysal/\">Andrea Saltarello</a>&nbsp;(professore a contratto presso il Politecnico di Milano e fondatore di UGIdotNET, una delle più grandi community italiane di sviluppatori software con oltre 16000 membri) e Rossy Koumanova e Michele Landolfo (entrambi della community Universal Access).Dal 2021 il board degli Accessibility Days è costituito da: Sauro Cesaretti, Michele Landolfo, Stefano Ottaviani, Andrea Saltarello e Francesca Sbianchi e a coronamento di un percorso fatto di grandi successi Il 20 aprile 2022 è stata costituita l’<a href=\"https://accessibilitydays.it/associazione/\">associazione Accessibility Days</a>."
           }
         }
       ],
@@ -60,16 +88,121 @@
     "description": "",
     "title": "Associazione",
     "body": {
-      "time": 1712730000000,
+      "time": 1744366366004,
       "blocks": [
         {
-          "type": "paragraph",
+          "id": "gRexPsYl4f",
+          "type": "list",
           "data": {
-            "text": ""
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/sauro-cesaretti-290b282b/\">Sauro Cesaretti</a>&nbsp;– Presidente",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/francesca-sbianchi-16478222b/\">Francesca Sbianchi</a>&nbsp;– Vicepresidente",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/michele-landolfo/\">Michele Landolfo</a>&nbsp;– Segretario",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "XvfxbYDMij",
+          "type": "header",
+          "data": {
+            "text": "I Soci Fondatori",
+            "level": 2
+          }
+        },
+        {
+          "id": "IZ8dNxUKa1",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/sauro-cesaretti-290b282b/\">Sauro Cesaretti</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/stefanoottaviani/\">Stefano Ottaviani</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/michele-landolfo/\">Michele Landolfo</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/andysal/\">Andrea Saltarello</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/francesca-sbianchi-16478222b/\">Francesca Sbianchi</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/robertoscano/\">Roberto Scano</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://www.linkedin.com/in/fabriziocaccavello/\">Fabrizio Caccavello</a>",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "uTFYzmwlc_",
+          "type": "header",
+          "data": {
+            "text": "Atto Costitutivo e Statuto",
+            "level": 2
+          }
+        },
+        {
+          "id": "GiSc9o43EX",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "<a href=\"https://bit.ly/ad-atto-costitutivo-accessibile\">Atto Costitutivo (versione accessibile)</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://bit.ly/ad-statuto-accessibile\">Statuto (versione accessibile)</a>",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "<a href=\"https://bit.ly/ad-atto-costitutivo-statuto-timbri\">Atto Costitituivo e Statuto (versione con timbri, non accessibile)</a>",
+                "meta": {},
+                "items": []
+              }
+            ]
           }
         }
       ],
-      "version": "2.29.1"
+      "version": "2.31.0-rc.7"
     }
   },
   {
@@ -77,30 +210,132 @@
     "title": "Location",
     "description": "",
     "body": {
-      "time": 1712730000000,
+      "time": 1744366313960,
       "blocks": [
         {
-          "type": "paragraph",
+          "id": "E0Zjbp4JeC",
+          "type": "header",
           "data": {
-            "text": ""
+            "text": "In presenza: Istituto dei Ciechi di Milano",
+            "level": 2
           }
-        }
-      ],
-      "version": "2.29.1"
-    }
-  },
-  {
-    "slug": "contatti",
-    "title": "Contattaci",
-    "description": "",
-    "body": {
-      "time": 1744306972233,
-      "blocks": [
+        },
         {
-          "id": "h4hPBvYMAJ",
+          "id": "1TAbOWxKis",
           "type": "paragraph",
           "data": {
-            "text": "sono la pagina contatti"
+            "text": "Indirizzo: Via Vivaio, 7, MilanoSito:&nbsp;<a href=\"http://www.istciechimilano.it/\">http://www.istciechimilano.it/</a>"
+          }
+        },
+        {
+          "id": "BFtk_27dC8",
+          "type": "header",
+          "data": {
+            "text": "Come raggiungere l’Istituto dei Ciechi",
+            "level": 2
+          }
+        },
+        {
+          "id": "RaJWUSlpqi",
+          "type": "paragraph",
+          "data": {
+            "text": "Posizione:&nbsp;<a href=\"https://goo.gl/maps/WFxn2an55HPd8ZSKA\">apri su Google Maps</a>"
+          }
+        },
+        {
+          "id": "VAuCO-R2EM",
+          "type": "paragraph",
+          "data": {
+            "text": "Metropolitana:&nbsp;Linea 1: fermate San Babila e Palestro."
+          }
+        },
+        {
+          "id": "OCUh8pRQ0a",
+          "type": "paragraph",
+          "data": {
+            "text": "In auto: ATTENZIONE! L’istituto si trova all’interno della ZTL. Si può arrivare in auto ai bordi di Milano, lasciando l’auto in un parcheggio ATM, e da lì prendere la metropolitana. Oppure, si può entrare nella ZTL pagando il ticket di ingresso in Area C."
+          }
+        },
+        {
+          "id": "2VvhY1oCOR",
+          "type": "header",
+          "data": {
+            "text": "Informazioni su Track e Aule",
+            "level": 2
+          }
+        },
+        {
+          "id": "gPJA1dLmTL",
+          "type": "paragraph",
+          "data": {
+            "text": "Aule per le sessioni"
+          }
+        },
+        {
+          "id": "FnfDRq6zFU",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Track 1: Sala Barozzi, Piano Terra",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Track 2: Sala Stoppani, 1° Piano",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Track 3: Aula Tocca e Impara, 2° Piano",
+                "meta": {},
+                "items": []
+              }
+            ]
+          }
+        },
+        {
+          "id": "3yDmHzaHU8",
+          "type": "paragraph",
+          "data": {
+            "text": "Aule per i workshop"
+          }
+        },
+        {
+          "id": "rSlYpckEj4",
+          "type": "list",
+          "data": {
+            "style": "unordered",
+            "meta": {},
+            "items": [
+              {
+                "content": "Aula Workshop 1: collocata al 1° Piano",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Aula Workshop 2: collocata al 1° Piano",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Aula Workshop 3: collocata al 1° Piano",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Aula Workshop 4: collocata al 2° Piano",
+                "meta": {},
+                "items": []
+              },
+              {
+                "content": "Aula Workshop Maker: Sala Mostre, Piano Terra (vicino all’ingresso)",
+                "meta": {},
+                "items": []
+              }
+            ]
           }
         }
       ],

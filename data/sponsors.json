@@ -1,12 +1,47 @@
 [
   {
-    "name": "Agid",
-    "logo": "/sponsors/agid.png",
-    "level": "patrocinio"
+    "name": "Microsoft",
+    "logo": "microsoft-500x250-2.png",
+    "level": "Deluxe"
   },
   {
-    "name": "Microsoft",
-    "logo": "/sponsors/microsoft.png",
-    "level": "deluxe"
+    "name": "UNINFO Ente Federato UNI per la normazione delle \"Tecnologie Informatiche e loro applicazioni\"",
+    "logo": "uninfo300x150.png",
+    "level": "Patrocinio"
+  },
+  {
+    "name": "Agid - Agenzia per l'Italia Digitale",
+    "logo": "agid-agenziaperlitalia.jpg",
+    "level": "Patrocinio"
+  },
+  {
+    "name": "A.I.D. Associazione Italiana Dislessia",
+    "logo": "aid-300.jpg",
+    "level": "Patrocinio"
+  },
+  {
+    "name": "Unione italiana dei ciechi e degli ipovedenti",
+    "logo": "uici.jpg",
+    "level": "Patrocinio"
+  },
+  {
+    "name": "Unione Italiana dei Ciechi e degli Ipovedenti Milano",
+    "logo": "istituto-dei-ciechi-milano-300.jpg",
+    "level": "Patrocinio"
+  },
+  {
+    "name": "INVAT - Istituto Nazionale Valutazione Ausili e Tecnologie",
+    "logo": "invat.jpg",
+    "level": "Patrocinio"
+  },
+  {
+    "name": "TIM",
+    "logo": "timdeluxe.png",
+    "level": "Deluxe"
+  },
+  {
+    "name": "sitiaccessibili.it",
+    "logo": "logo-verticale-2024-sitiaccessibili-big.png",
+    "level": "Diamond"
   }
 ]

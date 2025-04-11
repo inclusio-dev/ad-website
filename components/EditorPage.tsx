@@ -104,7 +104,7 @@ export default function EditorPage({ slug }: { slug: string }) {
           linkTool: {
             class: LinkTool as unknown as ToolConstructable,
             config: {
-              endpoint: '/api/fetch-url', // Può essere un endpoint dummy o reale
+              endpoint: 'http://localhost:8008/fetchUrl', // Può essere un endpoint dummy o reale
             },
           },
         },

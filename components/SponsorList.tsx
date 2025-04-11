@@ -33,10 +33,16 @@ export default function SponsorList({ sponsors }: SponsorListProps) {
     return (
         <div className="space-y-8">
             {levels.map((level) => {
-                const sponsorsAtThisLevel = sortedSponsors.filter(
-                    (sponsor) =>
-                        sponsor.level.toLowerCase() === level.toLowerCase()
-                );
+                const sponsorsAtThisLevel = sortedSponsors
+                    .filter(
+                        (sponsor) =>
+                            sponsor.level.toLowerCase() === level.toLowerCase()
+                    )
+                    .sort((a, b) =>
+                        a.name.localeCompare(b.name, "it", {
+                            sensitivity: "base",
+                        })
+                    );
 
                 if (sponsorsAtThisLevel.length === 0) return null;
 
@@ -44,9 +50,7 @@ export default function SponsorList({ sponsors }: SponsorListProps) {
 
                 return (
                     <div key={level} className="space-y-4">
-                        <div
-                            className={`border-b pb-1`}
-                        >
+                        <div className={`border-b pb-1`}>
                             <h2 className="text-lg font-semibold">
                                 {isPatrocinio
                                     ? "Con il patrocinio di"
@@ -61,7 +65,7 @@ export default function SponsorList({ sponsors }: SponsorListProps) {
                                     className="flex flex-col items-center"
                                 >
                                     <Image
-                                        src={sponsor.logo}
+                                        src={`/sponsors/${sponsor.logo}`}
                                         alt={sponsor.name}
                                         width={128} // larghezza in px, coerente con w-32
                                         height={0} // 0 per evitare forzature, gestiamo l'altezza con style
@@ -70,10 +74,10 @@ export default function SponsorList({ sponsors }: SponsorListProps) {
                                         unoptimized // opzionale se stai caricando immagini esterne
                                     />
 
-                                    <p className="text-sm font-semibold">
+                                    <p className="text-base font-semibold">
                                         {sponsor.name}
                                     </p>
-                                    <span className="text-xs text-gray-500 capitalize">
+                                    <span className="text-sm text-gray-700 capitalize">
                                         {sponsor.level}
                                     </span>
                                 </div>
