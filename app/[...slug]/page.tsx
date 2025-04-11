@@ -1,12 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import dynamic from 'next/dynamic'
-
-// Caricamento dinamico di EditorOutput
-const EditorOutput = dynamic(() => import('@/components/EditorOutput'), {
-  ssr: false, // Disabilita SSR per il componente EditorOutput
-})
+import { renderEditorJsContent } from "@/lib/editorjs-renderer"
 
 export default function PagePage({ params }: { params: { slug: string[] } }) {
   const slug = params.slug.join('/')
@@ -16,11 +11,10 @@ export default function PagePage({ params }: { params: { slug: string[] } }) {
   useEffect(() => {
     const fetchPage = async () => {
       try {
-        //const res = await fetch(`/api/pages?slug=${slug}`)
         const res = await fetch(`/api/pages?slug=${slug}`, {
           cache: 'no-store',
         })
-        
+
         if (!res.ok) throw new Error(`Errore nel caricamento ${res.status}`)
         const data = await res.json()
 
@@ -57,10 +51,7 @@ export default function PagePage({ params }: { params: { slug: string[] } }) {
   return (
     <article className="prose dark:prose-invert max-w-3xl mx-auto py-10">
       <h1 className="text-3xl font-bold mb-4">{page.title}</h1>
-      {page.description && <p className="text-lg text-gray-500 mb-4">{page.description}</p>}
-      {/* Utilizza EditorOutput per visualizzare il contenuto */}
-      <EditorOutput content={page.body} />
-      
+      {renderEditorJsContent(page.body)}
     </article>
   )
 }

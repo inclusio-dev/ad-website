@@ -85,7 +85,6 @@
   },
   {
     "slug": "chi-siamo/associazione",
-    "description": "",
     "title": "Associazione",
     "body": {
       "time": 1744366366004,
@@ -208,9 +207,8 @@
   {
     "slug": "location",
     "title": "Location",
-    "description": "",
     "body": {
-      "time": 1744366313960,
+      "time": 1744367871766,
       "blocks": [
         {
           "id": "E0Zjbp4JeC",
@@ -240,6 +238,13 @@
           "type": "paragraph",
           "data": {
             "text": "Posizione:&nbsp;<a href=\"https://goo.gl/maps/WFxn2an55HPd8ZSKA\">apri su Google Maps</a>"
+          }
+        },
+        {
+          "id": "ZS1VEmySaw",
+          "type": "code",
+          "data": {
+            "code": "<iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2798.045889309367!2d9.203665!3d45.4688795!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4786c6bc60beeaa9%3A0xb6bd2750217eed3f!2sFONDAZIONE%20ISTITUTO%20DEI%20CIECHI%20DI%20MILANO!5e0!3m2!1sit!2sit!4v1743706853383!5m2!1sit!2sit\" width=\"600\" height=\"450\" style=\"border:0;\" allowfullscreen=\"\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\"></iframe>"
           }
         },
         {
@@ -345,7 +350,6 @@
   {
     "slug": "privacy",
     "title": "Privacy Policy",
-    "description": "Come gestiamo i tuoi dati",
     "body": {
       "time": 1712730000000,
       "blocks": [
@@ -362,7 +366,6 @@
   {
     "slug": "termini-e-condizioni",
     "title": "Termini e condizioni",
-    "description": "Condizioni di utilizzo del sito",
     "body": {
       "time": 1712730000000,
       "blocks": [
