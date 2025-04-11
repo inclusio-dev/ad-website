@@ -1,18 +1,17 @@
 [
-    {
-      "name": "Fondazione ABC",
-      "logo": "/sponsors/agid.png",
-      "level": "gold"
-    },
-    {
-      "name": "Tech4Good",
-      "logo": "/sponsors/microsoft.png",
-      "level": "silver"
-    },
-    {
-      "name": "Solidarietà Digitale",
-      "logo": "/sponsors/tim.png",
-      "level": "bronze"
-    }
-  ]
-  
+  {
+    "name": "Agid",
+    "logo": "/sponsors/agid.png",
+    "level": "patrocinio"
+  },
+  {
+    "name": "Microsoft",
+    "logo": "/sponsors/microsoft.png",
+    "level": "deluxe"
+  },
+  {
+    "name": "TIM",
+    "logo": "/sponsors/tim.png",
+    "level": "deluxe"
+  }
+]

@@ -37,7 +37,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                                     <Link href="/">Home</Link>
                                     <ChiSiamoDropdown />
                                     <Link href="/agenda">Agenda</Link>
-                                    <Link href="/sponsor">Sponsor</Link>
+                                    <Link href="/sponsors">Sponsors</Link>
                                     <Link href="/location">Location</Link>
                                     <Link href="/contatti">Contattaci</Link>
                                 </nav>

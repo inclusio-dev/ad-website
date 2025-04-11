@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "preview": "next build && next start",
+    "preview": "next build && next start && npm run check:logos",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "check:logos": "npx ts-node scripts/check-external-sponsor-domains.ts"
   },
   "dependencies": {
     "@editorjs/editorjs": "^2.30.8",
@@ -21,7 +22,6 @@
     "autoprefixer": "10.4.14",
     "axios": "^1.8.4",
     "cheerio": "^1.0.0-rc.12",
-    "contentlayer": "^0.3.2",
     "editorjs-html": "^4.0.5",
     "eslint": "8.39.0",
     "eslint-config-next": "13.3.1",
@@ -43,6 +43,7 @@
     "@editorjs/header": "^2.8.8",
     "@editorjs/image": "^2.10.2",
     "@editorjs/list": "^2.0.6",
-    "@types/sanitize-html": "^2.15.0"
+    "@types/sanitize-html": "^2.15.0",
+    "ts-node": "^10.9.2"
   }
 }
