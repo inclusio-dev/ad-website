@@ -46,27 +46,27 @@ export function ChiSiamoDropdown() {
           id="chi-siamo-menu"
           role="menu"
           aria-labelledby="chi-siamo-button"
-          className="absolute left-0 mt-2 w-56 rounded-md shadow-lg bg-white dark:bg-slate-800 border dark:border-slate-700 z-10"
+          className="absolute left-0 mt-2 w-72 rounded-md shadow-lg bg-white dark:bg-slate-800 border dark:border-slate-700 z-10"
         >
           <div className="py-1" role="none">
             <Link
               href="/chi-siamo/cosa-sono"
               role="menuitem"
-              className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:bg-slate-100 dark:focus:bg-slate-700"
+              className="block px-4 py-2 text-sm whitespace-nowrap text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:bg-slate-100 dark:focus:bg-slate-700"
             >
-              Cosa sono
+              Cosa sono gli Accessibility Days
             </Link>
             <Link
               href="/chi-siamo/come-nascono"
               role="menuitem"
-              className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:bg-slate-100 dark:focus:bg-slate-700"
+              className="block px-4 py-2 text-sm whitespace-nowrap text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:bg-slate-100 dark:focus:bg-slate-700"
             >
-              Come nascono
+              Come nascono gli Accessibility Days
             </Link>
             <Link
               href="/chi-siamo/associazione"
               role="menuitem"
-              className="block px-4 py-2 text-sm text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:bg-slate-100 dark:focus:bg-slate-700"
+              className="block px-4 py-2 text-sm whitespace-nowrap text-slate-700 dark:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-700 focus:outline-none focus:bg-slate-100 dark:focus:bg-slate-700"
             >
               Associazione
             </Link>

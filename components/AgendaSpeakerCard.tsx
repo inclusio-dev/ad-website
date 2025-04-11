@@ -18,7 +18,7 @@ interface AgendaSpeakerCardProps {
 
 export const AgendaSpeakerCard = ({ speaker }: AgendaSpeakerCardProps) => {
   const fullName = `${speaker.first_name} ${speaker.last_name}`
-  const imageSrc = speaker.profile_picture_url || '/images/speaker-placeholder.jpg'
+  const imageSrc = speaker.profile_picture_url || '/speakers/speaker-placeholder.jpg'
 
   return (
     <div className="border rounded-2xl p-6 flex flex-col items-center text-center hover:shadow-lg transition-shadow bg-white dark:bg-neutral-900">

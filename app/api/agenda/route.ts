@@ -15,6 +15,7 @@ export async function GET() {
           id: item.id,
           title: item.title,
           description: item.description,
+          job_title: 'job_title' in item ? item.job_title : null,
           color: item.color,
           location: item.location,
           speakers: 'speakers' in item ? item.speakers : [],

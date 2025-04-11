@@ -36,6 +36,13 @@ export default function AdminAgendaPage() {
     return (
         <div className="container mx-auto py-10">
             <div className="max-w-5xl mx-auto">
+                <Link
+                    href="/admin/general"
+                    className="inline-flex items-center text-blue-600 hover:underline text-sm font-medium"
+                    >
+                    ← Torna all’elenco sessioni
+                </Link>
+
                 <h1 className="text-3xl font-bold mb-8">Gestione agenda</h1>
 
                 {agenda.map((day) => (
@@ -74,13 +81,9 @@ export default function AdminAgendaPage() {
                                                     ),
                                                 }}
                                             >
-                                                <Link
-                                                    href={`/admin/agenda/event/${item.id}`}
-                                                >
-                                                    <h4 className="text-lg font-semibold mb-1">
-                                                        {item.title}
-                                                    </h4>
-                                                </Link>
+                                                <h4 className="text-lg font-semibold mb-1">
+                                                    {item.title}
+                                                </h4>
 
                                                 {item.location && (
                                                     <p className="text-sm text-gray-600 mb-2">
@@ -114,7 +117,12 @@ export default function AdminAgendaPage() {
 
                                                 {item.id && (
                                                     <Link
-                                                        href={`/admin/agenda/${item.id}`}
+                                                        href={{
+                                                            pathname: `/admin/agenda/${item.id}`,
+                                                            query: {
+                                                                start: slot.start,
+                                                            },
+                                                        }}
                                                         className="text-blue-600 hover:underline"
                                                     >
                                                         Modifica sessione →
