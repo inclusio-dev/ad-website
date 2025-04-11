@@ -1,0 +1,16 @@
+[
+  {
+    "title": "WEBINAR \"Accessibilità digitale obbligatoria dal 28 giugno. Come farla bene?\"",
+    "description": "Tra meno di sei mesi entra in vigore l'Accessibility Act [...]",
+    "date": "9 gennaio 2025, dalle ore 18.00 alle 19.00",
+    "link": "https://esempio.com/iscriviti-webinar",
+    "linkLabel": "Iscriviti al webinar"
+  },
+  {
+    "title": "Un altro evento di esempio",
+    "description": "Breve descrizione...",
+    "date": "15 febbraio 2025",
+    "link": "https://esempio.com/evento-2",
+    "linkLabel": "Partecipa"
+  }
+]

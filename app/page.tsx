@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import SponsorList from "@/components/SponsorList";
 import sponsorsJson from "@/data/sponsors.json";
+import activities from "@/data/upcoming-activities.json";
+import ActivitiesList from "@/components/ActivitiesList";
 
 export default function Home() {
     const filteredSponsors = sponsorsJson.filter(
@@ -210,80 +212,21 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Eventi Section */}
+            {/* RoadTo Section */}
             <section className="py-16 px-4 md:px-8">
-                <div className="max-w-4xl mx-auto text-center">
-                    <h2 className="text-3xl font-bold mb-4">
-                        Eventi in programma
-                    </h2>
-                    <p className="text-lg mb-10">
-                        Partecipa a sessioni, workshop e momenti di networking.
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                        {/* Evento card 1 */}
-                        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-colors">
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">
-                                    Sessioni Accessibili
-                                </h3>
-                                <p className="text-gray-700 dark:text-gray-300">
-                                    Approfondisci le buone pratiche di
-                                    accessibilità nel design e nello sviluppo.
-                                </p>
-                            </div>
-                        </div>
-
-                        {/* Evento card 2 */}
-                        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg overflow-hidden transition-colors">
-                            <div className="p-6">
-                                <h3 className="text-xl font-semibold mb-2">
-                                    Workshop Tecnici
-                                </h3>
-                                <p className="text-gray-700 dark:text-gray-300">
-                                    Impara strumenti e tecniche per creare
-                                    esperienze digitali inclusive.
-                                </p>
-                            </div>
-                        </div>
+                <div className="max-w-4xl mx-auto text-left">
+                    <div className="text-left mb-12">
+                        <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
+                            Road to Accessibility Days
+                        </h2>
+                        <p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
+                            Notizie, approfondimenti e articoli per avvicinarsi
+                            al mondo dell’accessibilità.
+                        </p>
                     </div>
+                    <ActivitiesList items={activities} />
                 </div>
             </section>
-
-            {/* RoadTo Section */}
-            <section className="bg-white dark:bg-gray-900 px-6 md:px-10 py-16 max-w-7xl mx-auto">
-  <div className="text-center mb-12">
-    <h2 className="text-3xl md:text-4xl font-bold text-black dark:text-white">
-      Road to Accessibility Days
-    </h2>
-    <p className="text-lg text-gray-700 dark:text-gray-300 mt-2">
-      Notizie, approfondimenti e articoli per avvicinarsi al mondo dell’accessibilità.
-    </p>
-  </div>
-
-  <div className="grid gap-8 md:grid-cols-3">
-    {[1, 2, 3].map((i) => (
-      <div
-        key={i}
-        className="border border-gray-200 dark:border-gray-700 p-6 rounded-lg shadow-sm bg-white dark:bg-gray-800 flex flex-col justify-between"
-      >
-        <div>
-          <h3 className="text-xl font-semibold text-black dark:text-white mb-2">
-            Titolo articolo {i}
-          </h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            Breve descrizione dell’articolo o aggiornamento. Un’anteprima chiara e leggibile.
-          </p>
-        </div>
-        <Link
-          href={`/articoli/${i}`}
-          className="inline-block mt-auto px-4 py-2 border border-black text-black dark:text-white dark:border-white font-semibold rounded hover:bg-gray-100 dark:hover:bg-gray-700 transition text-sm"
-        >
-          Leggi
-        </Link>
-      </div>
-    ))}
-  </div>
-</section>
 
 
             {/* Sponsor Section */}
