@@ -11,7 +11,7 @@ export default function AdminLoginPage() {
   const handleLogin = () => {
     if (username === 'admin' && password === '1234') {
       localStorage.setItem('isAdmin', 'true')
-      router.push('/admin/pages')
+      router.push('/admin/general')
     } else {
       alert('Credenziali non valide')
     }
