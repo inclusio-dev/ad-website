@@ -1,9 +1,6 @@
 
 import Link from "next/link"
 
-import { AgendaCompactView } from "@/components/AgendaCompactView";
-import { AgendaDayDocument, AgendaEventDocument } from "@/types";
-
 export default function Home() {
 
  

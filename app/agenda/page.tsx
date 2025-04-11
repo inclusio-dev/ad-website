@@ -1,8 +1,8 @@
 import path from 'path';
 import fs from 'fs/promises';
 import Link from 'next/link';
-import { ClientFilteredAgenda } from '@/components/ClientFilteredAgenda' // ✅ aggiunto
-import { AgendaSearchBar } from '@/components/AgendaSearchBar' // se già importato va bene
+import { ClientFilteredAgenda } from '@/components/ClientFilteredAgenda' // ✅ aggiuntoortato va bene
+import { Mic, Puzzle } from 'lucide-react';
 
 export default async function AgendaPage() {
   const jsonPath = path.join(process.cwd(), 'data', 'agenda.json');
@@ -37,10 +37,11 @@ export default async function AgendaPage() {
           <h2 className="text-2xl font-semibold mb-6 pb-2 border-b">Sessioni</h2>
           <div className="space-y-6">
             {sessionDays.map((day: any) => (
-              <div key={day.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div key={day.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow bg-[#FFD100]">
                 <Link href={`/agenda/sessioni/${day.slug}`}>
-                  <h3 className="text-xl font-semibold">{day.label}</h3>
-                  <p className="text-gray-500 mt-2">
+                  <h3 className="text-xl font-semibold"><Mic className="inline w-6 h-6 text-gray-800" aria-hidden="true" />
+                  {day.label}</h3>
+                  <p className="text-gray-800 mt-2">
                     {new Date(day.date).toLocaleDateString('it-IT', {
                       weekday: 'long',
                       year: 'numeric',
@@ -48,12 +49,12 @@ export default async function AgendaPage() {
                       day: 'numeric',
                     })}
                   </p>
-                  <p className="mt-4 text-blue-600">Visualizza programma →</p>
+                  <p className="mt-4 text-gray-800">Visualizza programma →</p>
                 </Link>
               </div>
             ))}
             {sessionDays.length === 0 && (
-              <p className="text-gray-500">Nessuna sessione disponibile</p>
+              <p className="text-gray-800">Nessuna sessione disponibile</p>
             )}
           </div>
         </div>
@@ -63,10 +64,10 @@ export default async function AgendaPage() {
           <h2 className="text-2xl font-semibold mb-6 pb-2 border-b">Workshop</h2>
           <div className="space-y-6">
             {workshopDays.map((day: any) => (
-              <div key={day.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow">
+              <div key={day.id} className="border rounded-lg p-6 hover:shadow-lg transition-shadow bg-[#FFD100]">
                 <Link href={`/agenda/workshop/${day.slug}`}>
-                  <h3 className="text-xl font-semibold">{day.label}</h3>
-                  <p className="text-gray-500 mt-2">
+                  <h3 className="text-xl font-semibold"><Puzzle className="inline w-6 h-6 text-gray-800" aria-hidden="true" /> {day.label}</h3>
+                  <p className="text-gray-800 mt-2">
                     {new Date(day.date).toLocaleDateString('it-IT', {
                       weekday: 'long',
                       year: 'numeric',
@@ -74,12 +75,12 @@ export default async function AgendaPage() {
                       day: 'numeric',
                     })}
                   </p>
-                  <p className="mt-4 text-blue-600">Visualizza programma →</p>
+                  <p className="mt-4 text-gray-800">Visualizza programma →</p>
                 </Link>
               </div>
             ))}
             {workshopDays.length === 0 && (
-              <p className="text-gray-500">Nessun workshop disponibile</p>
+              <p className="text-gray-800">Nessun workshop disponibile</p>
             )}
           </div>
         </div>
