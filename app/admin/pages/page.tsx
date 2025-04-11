@@ -25,7 +25,7 @@ export default function PagesList() {
   }, [router])
 
   return (
-    <div className="max-w-2xl mx-auto mt-12 space-y-4">
+    <div className="max-w-5xl mx-auto mt-12 space-y-4">
       <h1 className="text-2xl font-bold mb-4">Pagine modificabili</h1>
       {pages.map(page => (
         <div key={`${page.slug}-${page.title}`}>

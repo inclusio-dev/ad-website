@@ -10,7 +10,7 @@ export default function SponsorManager() {
     const [newSponsor, setNewSponsor] = useState({
         name: "",
         logo: "",
-        level: "bronze",
+        level: "",
     });
 
     useEffect(() => {
@@ -86,7 +86,7 @@ export default function SponsorManager() {
     };
 
     return (
-        <div className="max-w-2xl mx-auto mt-12 space-y-4">
+        <div className="max-w-5xl mx-auto mt-12 space-y-4">
             <h1 className="text-2xl font-bold mb-4">Area gestione sponsor</h1>
 
             <div>
