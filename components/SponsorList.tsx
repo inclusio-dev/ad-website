@@ -77,7 +77,7 @@ export default function SponsorList({ sponsors }: SponsorListProps) {
                                     <p className="text-base font-semibold">
                                         {sponsor.name}
                                     </p>
-                                    <span className="text-sm text-gray-700 capitalize">
+                                    <span className="text-sm text-gray-700 dark:text-white capitalize">
                                         {sponsor.level}
                                     </span>
                                 </div>

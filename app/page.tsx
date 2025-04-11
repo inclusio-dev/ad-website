@@ -6,6 +6,7 @@ import SponsorList from "@/components/SponsorList";
 import sponsorsJson from "@/data/sponsors.json";
 import activities from "@/data/upcoming-activities.json";
 import ActivitiesList from "@/components/ActivitiesList";
+import GaadLogo from '@/public/assets/logo-gaad.svg';
 
 export default function Home() {
     const filteredSponsors = sponsorsJson.filter(
@@ -14,12 +15,12 @@ export default function Home() {
             sponsor.level.toLowerCase() === "deluxe"
     );
     return (
-        <main className="bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300">
+        <main className="bg-white dark:bg-slate-950 text-gray-900 dark:text-white transition-colors duration-300">
             {/* Hero Section */}
             <section className="bg-[#FFD100] rounded-xl px-6 py-12 md:py-20 md:px-10 max-w-7xl mx-auto my-12">
                 <div className="flex flex-col md:flex-row items-center gap-10">
                     {/* Colonna sinistra - Testi */}
-                    <div className="md:w-1/2 text-center md:text-left">
+                    <div className="md:w-1/2 text-left md:text-left">
                         <h1 className="text-4xl md:text-5xl font-extrabold text-black leading-tight mb-3">
                             Accessibility Days
                         </h1>
@@ -64,7 +65,7 @@ export default function Home() {
             </section>
 
             {/* About Section */}
-            <section className="bg-white dark:bg-gray-900 px-6 md:px-10 py-16 max-w-7xl mx-auto">
+            <section className="bg-white dark:bg-slate-950 px-6 md:px-10 py-16 max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row gap-10 items-start">
                     {/* Colonna sinistra: Titolo e testo */}
                     <div className="md:w-3/4">
@@ -95,19 +96,13 @@ export default function Home() {
 
                     {/* Colonna destra: Logo GAAD */}
                     <div className="md:w-1/4 flex justify-center md:justify-end">
-                        <Image
-                            src="/assets/gaad-full-text-logo-navy.svg" // inserisci il logo GAAD nella public/logos/
-                            alt="Logo Global Accessibility Awareness Day"
-                            width={160}
-                            height={160}
-                            className="w-auto h-24 md:h-32 object-contain"
-                        />
+                      <GaadLogo className="w-2xl h-auto fill-[#01385e] dark:fill-white" aria-hidden="true" />
                     </div>
                 </div>
             </section>
 
             {/* Donazioni */}
-            <section className="bg-white dark:bg-gray-900 px-6 md:px-10 py-16 max-w-7xl mx-auto">
+            <section className="bg-white dark:bg-slate-950 px-6 md:px-10 py-16 max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
                     {/* Colonna sinistra: box giallo */}
                     <div className="md:w-1/3 bg-[#FFD100] rounded-lg px-6 py-8 text-black shadow-md">
@@ -158,7 +153,7 @@ export default function Home() {
             </section>
 
             {/* Come Funziona Section */}
-            <section className="bg-white dark:bg-gray-900 px-6 md:px-10 py-16 max-w-7xl mx-auto">
+            <section className="bg-white dark:bg-slate-950 px-6 md:px-10 py-16 max-w-7xl mx-auto">
                 <div className="flex flex-col md:flex-row gap-12 items-center">
                     {/* Colonna sinistra: immagine */}
                     <div className="md:w-1/2">
@@ -231,7 +226,7 @@ export default function Home() {
 
             {/* Sponsor Section */}
             <section className="py-16 px-4 md:px-8 bg-white dark:bg-gray-800 transition-colors">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="max-w-4xl mx-auto text-left">
                     <h2 className="text-3xl font-bold mb-4">
                         Con il patrocinio e i main sponsor
                     </h2>
@@ -241,7 +236,7 @@ export default function Home() {
 
             {/* Contatti Section */}
             <section className="py-16 px-4 md:px-8">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="max-w-4xl mx-auto text-left">
                     <h2 className="text-3xl font-bold mb-4">Contattaci</h2>
                     <p className="text-lg mb-6">
                         Per informazioni, partnership o richieste speciali

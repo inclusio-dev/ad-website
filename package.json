@@ -43,6 +43,7 @@
     "@editorjs/header": "^2.8.8",
     "@editorjs/image": "^2.10.2",
     "@editorjs/list": "^2.0.6",
+    "@svgr/webpack": "^8.1.0",
     "@types/sanitize-html": "^2.15.0",
     "ts-node": "^10.9.2"
   }
